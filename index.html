@@ -17,7 +17,6 @@
             <ul class="flex gap-10">
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#galeria">Galería</a></li>
-                <li><a href="#promos">Promociones</a></li>
                 <li><a href="#catalogo">Catalogo</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
@@ -37,120 +36,147 @@
             </div>
         </section>
 
-        <section class="carousel-container w-full h-[50vh] bg-blue-400 scroll-mt-30" id="galeria">
-            <div class="containerCatalogo pt-[120px]">
-                <div class="carouselProd">
-                    <div class="slide"></div>
-                    <div class="slide"></div>
-                    <div class="slide"></div>
-                    <div class="slide"></div>
-                    <div class="slide"></div>
-                    <div class="slide"></div>
-                    <div class="slide"></div>
-                    <div class="slide"></div>
-                    <div class="slide"></div>
+        <section class="carousel-container w-full bg-[rgb(208,158,84)] scroll-mt-30" id="galeria">
+            <div class="galProducts w-full">
+                <h4 class="text-black text-2xl text-center">Productos Disponibles</h4>
+            </div>
+            <div class="carouselProd">
+                <div class="slide">
+                    <img src="./imgs/espresso.jpg" alt="">
+                </div>
+                <div class="slide">
+                    <img src="./imgs/americano.jpg" alt="">
+                </div>
+                <div class="slide">
+                    <img src="./imgs/macchiato.jpg" alt="">
+                </div>
+                <div class="slide">
+                    <img src="./imgs/cortado.jpg" alt="">
+                </div>
+                <div class="slide">
+                    <img src="./imgs/flat white.jpg" alt="">
+                </div>
+                <div class="slide">
+                    <img src="./imgs/capuccino.jpg" alt="">
+                </div>
+                <div class="slide">
+                    <img src="./imgs/latte.jpg" alt="">
+                </div>
+                <div class="slide">
+                    <img src="./imgs/mocha.jpg" alt="">
+                </div>
+                <div class="slide">
+                    <img src="./imgs/iced latte.jpg" alt="">
                 </div>
             </div>
-        </section>
-
-        <section class="w-full h-[100vh] scroll-mt-30" id="promos">
-            <div class="promociones">
-
+            <div class="instru bg-gray-300 w-full">
+                <h4 class="text-black text-1xl text-center">Desliza para ver los productos</h4>
             </div>
+            
         </section>
 
-        <section class="w-full h-[100vh] catalogo scroll-mt-30" id="catalogo">
-            <div class="catalogo">
+        <section class="w-full h-[100vh] catalogo scroll-mt-30 flex" id="catalogo">
+            <div class="catalogo w-[70%] grid grid-cols-3 p-5 bg-emerald-300">
                 <div class="cafe">
                     <div class="imagenCarousel">
-                        <img src="" alt="">
+                        <img src="./imgs/espresso.jpg" alt="">
                     </div>
-                    <div class="botones flex flex-col ">
+                    <div class="botones">
                         <strong>Espresso</strong>
                         <span>$</span>
-                        <button>Agregar</button>
+                        <button class="agregar">Agregar</button>
                     </div>
                 </div>
                 <div class="cafe">
                     <div class="imagenCarousel">
-                        <img src="" alt="">
+                        <img src="./imgs/americano.jpg" alt="">
                     </div>
-                    <div class="botones flex flex-col ">
+                    <div class="botones">
                         <strong>Americano</strong>
                         <span>$</span>
-                        <button>Agregar</button>
+                        <button class="agregar">Agregar</button>
                     </div>
                 </div>
                 <div class="cafe">
                     <div class="imagenCarousel">
-                        <img src="" alt="">
+                        <img src="./imgs/macchiato.jpg" alt="">
                     </div>
-                    <div class="botones flex flex-col ">
+                    <div class="botones ">
                         <strong>Machiatto</strong>
                         <span>$</span>
-                        <button>Agregar</button>
+                        <button class="agregar">Agregar</button>
                     </div>
                 </div>
                 <div class="cafe">
                     <div class="imagenCarousel">
-                        <img src="" alt="">
+                        <img src="./imgs/cortado.jpg" alt="">
                     </div>
-                    <div class="botones flex flex-col ">
+                    <div class="botones ">
                         <strong>Cortado</strong>
                         <span>$</span>
-                        <button>Agregar</button>
+                        <button class="agregar">Agregar</button>
                     </div>
                 </div>
                 <div class="cafe">
                     <div class="imagenCarousel">
-                        <img src="" alt="">
+                        <img src="./imgs/flat white.jpg" alt="">
                     </div>
-                    <div class="botones flex flex-col ">
+                    <div class="botones ">
                         <strong>Flat White</strong>
                         <span>$</span>
-                        <button>Agregar</button>
+                        <button class="agregar">Agregar</button>
                     </div>
                 </div>
                 <div class="cafe">
                     <div class="imagenCarousel">
-                        <img src="" alt="">
+                        <img src="./imgs/capuccino.jpg" alt="">
                     </div>
-                    <div class="botones flex flex-col ">
+                    <div class="botones ">
                         <strong>Capuccino</strong>
                         <span>$</span>
-                        <button>Agregar</button>
+                        <button class="agregar">Agregar</button>
                     </div>
                 </div>
                 <div class="cafe">
                     <div class="imagenCarousel">
-                        <img src="" alt="">
+                        <img src="./imgs/latte.jpg" alt="">
                     </div>
-                    <div class="botones flex flex-col ">
+                    <div class="botones ">
                         <strong>Latte</strong>
                         <span>$</span>
-                        <button>Agregar</button>
+                        <button class="agregar">Agregar</button>
                     </div>
                 </div>
                 <div class="cafe">
                     <div class="imagenCarousel">
-                        <img src="" alt="">
+                        <img src="./imgs/mocha.jpg" alt="">
                     </div>
-                    <div class="botones flex flex-col ">
+                    <div class="botones ">
                         <strong>Mocha</strong>
                         <span>$</span>
-                        <button>Agregar</button>
+                        <button class="agregar">Agregar</button>
                     </div>
                 </div>
                 <div class="cafe">
                     <div class="imagenCarousel">
-                        <img src="" alt="">
+                        <img src="./imgs/iced latte.jpg" alt="">
                     </div>
-                    <div class="botones flex flex-col ">
+                    <div class="botones ">
                         <strong>Latte Frio</strong>
                         <span>$</span>
-                        <button>Agregar</button>
+                        <button class="agregar">Agregar</button>
                     </div>
                 </div>
+            </div>
+            <div class="carrito w-[30%] h-full bg-red-400" id="carrito">
+                <div class="productosCarrito">
+
+                </div>
+                <div class="btones">
+
+                </div>
+
+
             </div>
         </section>
         <section class="w-full h-[100vh] scroll-mt-30" id="contacto">

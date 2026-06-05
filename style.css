@@ -11,15 +11,79 @@ header{
     
 }
 
+/*? CAROUSEL */
 
-.catalogo{
+/*? CAROUSEL */
+
+.carousel-container {
+    position: relative;
+}
+
+.carousel-container .carouselProd {
     display: flex;
-    gap: 15px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
 }
 
-.catologo .cafe{
-    border-radius: 2px;
-    width: 250px;
-    height: 250px;
-    background-color: aqua;
+.carouselProd::-webkit-scrollbar {
+    display: none;
 }
+
+.carousel-container .carouselProd .slide {
+    min-width: 100%;
+    height: 45vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: start;
+}
+
+.carousel-container .carouselProd .slide img {
+    width: 50%;
+    height: 100%;
+    object-fit: contain;
+    padding: 10px;
+}
+
+
+
+
+/*! Catalogo */
+
+
+.cafe{
+    border: 2px solid red;
+    border-radius: 20px;
+    width: 250px;
+    height: 290px;
+}
+
+.cafe img{
+    border-top-left-radius: 18px;
+    border-top-right-radius: 18px;
+}
+
+.cafe .botones{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 6px;
+    
+}
+
+.cafe .botones strong{
+    text-align: center;
+}
+
+.cafe .botones button{
+    align-self: center;
+    width: 80%;
+    height: 35px;
+    background-color: aqua;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+
