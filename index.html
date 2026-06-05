@@ -4,39 +4,163 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="style.css">
     <title>CodeBrew</title>
 </head>
 <body>
-    <header class="w-screen h-20 bg-red-500">
-        <nav class="w-full h-full flex justify-between">
-            <h2>CodeBrew</h2>
+    <header class="w-full h-[120px] bg-[rgb(250,236,201)] flex justify-center sticky top-0 z-50">
+        <nav class="w-4/5 h-full flex justify-between items-center p-1">
+            <div class="logo w-37 h-50 max-w-full max-h-full flex justify-center items-center">
+                <a href=""><img src="./imgs/logito.jpeg" class=" h-full max-w-full max-h-full rounded-full"></a>
+            </div>
             <ul class="flex gap-10">
                 <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#catalogo">Catalogo Café</a></li>
+                <li><a href="#galeria">Galería</a></li>
                 <li><a href="#promos">Promociones</a></li>
+                <li><a href="#catalogo">Catalogo</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
         </nav>
-    </header>
+    </header> 
 
     <main>
-        <section class="" id="inicio">
-
+        <section class="w-full h-[90vh] scroll-mt-30" id="inicio">
+            <div class="hero w-full h-[90vh] p-[45px] bg-[url('./imgs/cafecito1.jpg')] bg-cover bg-center bg-no-repeat flex justify-end items-center">
+                <div class="miniHero w-[25%] h-[25%] bg-white/40 flex flex-col items-center gap-[20px] p-5 rounded-3xl">
+                    <h1 class="text-2xl">El mejor café para programar</h1>
+                    <p class="descHero">
+                        Hecho con granos 100% naturales, extraidos desde el <br>
+                        sur de Chile 
+                    </p>
+                </div>
+            </div>
         </section>
-        <section class="" id="catalogo">
 
+        <section class="carousel-container w-full h-[50vh] bg-blue-400 scroll-mt-30" id="galeria">
+            <div class="containerCatalogo pt-[120px]">
+                <div class="carouselProd">
+                    <div class="slide"></div>
+                    <div class="slide"></div>
+                    <div class="slide"></div>
+                    <div class="slide"></div>
+                    <div class="slide"></div>
+                    <div class="slide"></div>
+                    <div class="slide"></div>
+                    <div class="slide"></div>
+                    <div class="slide"></div>
+                </div>
+            </div>
         </section>
-        <section class="" id="promos">
 
+        <section class="w-full h-[100vh] scroll-mt-30" id="promos">
+            <div class="promociones">
+
+            </div>
         </section>
-        <section class="" id="contacto">
+
+        <section class="w-full h-[100vh] catalogo scroll-mt-30" id="catalogo">
+            <div class="catalogo">
+                <div class="cafe">
+                    <div class="imagenCarousel">
+                        <img src="" alt="">
+                    </div>
+                    <div class="botones flex flex-col ">
+                        <strong>Espresso</strong>
+                        <span>$</span>
+                        <button>Agregar</button>
+                    </div>
+                </div>
+                <div class="cafe">
+                    <div class="imagenCarousel">
+                        <img src="" alt="">
+                    </div>
+                    <div class="botones flex flex-col ">
+                        <strong>Americano</strong>
+                        <span>$</span>
+                        <button>Agregar</button>
+                    </div>
+                </div>
+                <div class="cafe">
+                    <div class="imagenCarousel">
+                        <img src="" alt="">
+                    </div>
+                    <div class="botones flex flex-col ">
+                        <strong>Machiatto</strong>
+                        <span>$</span>
+                        <button>Agregar</button>
+                    </div>
+                </div>
+                <div class="cafe">
+                    <div class="imagenCarousel">
+                        <img src="" alt="">
+                    </div>
+                    <div class="botones flex flex-col ">
+                        <strong>Cortado</strong>
+                        <span>$</span>
+                        <button>Agregar</button>
+                    </div>
+                </div>
+                <div class="cafe">
+                    <div class="imagenCarousel">
+                        <img src="" alt="">
+                    </div>
+                    <div class="botones flex flex-col ">
+                        <strong>Flat White</strong>
+                        <span>$</span>
+                        <button>Agregar</button>
+                    </div>
+                </div>
+                <div class="cafe">
+                    <div class="imagenCarousel">
+                        <img src="" alt="">
+                    </div>
+                    <div class="botones flex flex-col ">
+                        <strong>Capuccino</strong>
+                        <span>$</span>
+                        <button>Agregar</button>
+                    </div>
+                </div>
+                <div class="cafe">
+                    <div class="imagenCarousel">
+                        <img src="" alt="">
+                    </div>
+                    <div class="botones flex flex-col ">
+                        <strong>Latte</strong>
+                        <span>$</span>
+                        <button>Agregar</button>
+                    </div>
+                </div>
+                <div class="cafe">
+                    <div class="imagenCarousel">
+                        <img src="" alt="">
+                    </div>
+                    <div class="botones flex flex-col ">
+                        <strong>Mocha</strong>
+                        <span>$</span>
+                        <button>Agregar</button>
+                    </div>
+                </div>
+                <div class="cafe">
+                    <div class="imagenCarousel">
+                        <img src="" alt="">
+                    </div>
+                    <div class="botones flex flex-col ">
+                        <strong>Latte Frio</strong>
+                        <span>$</span>
+                        <button>Agregar</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="w-full h-[100vh] scroll-mt-30" id="contacto">
 
         </section>
     </main>
 
-    <footer>
-
+    <footer class="w-full h-[50vh] flex justify-center items-center flex-col bg-black">
+        <h3 class="text-white">Nos Ubicamos Aquí</h3>
+        <iframe class="" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1581.8097308388042!2d-73.11239906668432!3d-40.58112041344842!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9616367329c8f58d%3A0x47fbb33fea605c22!2sInacap%20-%20Sede%20Osorno!5e1!3m2!1ses-419!2scl!4v1780618302865!5m2!1ses-419!2scl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
     </footer>
 </body>
