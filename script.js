@@ -84,3 +84,9 @@ function menu() {
     });
 
 }
+
+function agregar(id) {
+    const cafe = cafes.find(cafe => cafe.id === id);
+    carrito.push(cafe);
+
+}
