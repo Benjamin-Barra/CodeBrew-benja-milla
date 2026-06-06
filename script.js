@@ -59,3 +59,28 @@ const cafes = [
 let carrito = []
 const catalogo = document.getElementById("productosCatalogo");
 const contenedorCarrito = document.querySelector(".productos");
+
+function menu() {
+    catalogo.innerHTML = "";
+    cafes.forEach(cafe =>  {
+
+        catalogo.innerHTML += `
+            <div class="cafe">
+                <div class="imagenes">
+                    <img src="${cafe.imagen}" alt="${cafe.nombre}">
+                </div>
+            </div>
+
+            <div class="boton">
+                <strong>${cafe.nombre}</strong>
+                <span>$${cafe.precio}</span>
+
+                <button onclick="agregar(${cafe.id})">
+                    Agregar
+                </button>
+            </div> 
+        
+        `;
+    });
+
+}
