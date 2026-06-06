@@ -89,4 +89,31 @@ function agregar(id) {
     const cafe = cafes.find(cafe => cafe.id === id);
     carrito.push(cafe);
 
+    actualizar();
 }
+
+function actualizar(){
+    contenedorCarrito.innerHTML = "";
+    if (carrito.length === 0) {
+        contenedorCarrito.innerHTML = `
+            <h3>Tu orden esta vacia</h3>
+        `;
+
+        return;
+    }
+
+    let total = 0;
+    carrito.forEach(cafe => {
+        total += cafe.precio;
+
+        contenedorCarrito.innerHTML += `
+            <p>${cafe.nombre} - $${cafe.precio}</p>
+        `;
+
+    });
+
+}
+
+
+menu()
+actualizar()
