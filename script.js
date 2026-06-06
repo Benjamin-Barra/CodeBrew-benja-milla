@@ -69,16 +69,17 @@ function menu() {
                 <div class="imagenes">
                     <img src="${cafe.imagen}" alt="${cafe.nombre}">
                 </div>
+
+                <div class="boton">
+                    <strong>${cafe.nombre}</strong>
+                    <span>$${cafe.precio}</span>
+
+                    <button onclick="agregar(${cafe.id})">
+                        Agregar
+                    </button>
+                </div> 
+
             </div>
-
-            <div class="boton">
-                <strong>${cafe.nombre}</strong>
-                <span>$${cafe.precio}</span>
-
-                <button onclick="agregar(${cafe.id})">
-                    Agregar
-                </button>
-            </div> 
         
         `;
     });
