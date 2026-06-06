@@ -97,7 +97,9 @@ function actualizar(){
     contenedorCarrito.innerHTML = "";
     if (carrito.length === 0) {
         contenedorCarrito.innerHTML = `
-            <h3>Tu orden esta vacia</h3>
+            <div class="items vacio">
+                <span>Tu orden esta vacia</span>
+            </div>
         `;
 
         return;
@@ -108,10 +110,27 @@ function actualizar(){
         total += cafe.precio;
 
         contenedorCarrito.innerHTML += `
-            <p>${cafe.nombre} - $${cafe.precio}</p>
+            <div class="items">
+                <span>${cafe.nombre}</span>
+                <span>$${cafe.precio}</span>
+            </div>
         `;
 
     });
+
+    let descuento = 0;
+    if (total > 10000) {
+        descuento = total * 0.10;
+    }
+
+    const totalFinal = total - descuento;
+
+    contenedorCarrito.innerHTML += `
+        <hr>
+        <p>Subtotal: $${total}</p>
+        <p>Descuento: $${descuento}</p>
+        <h2>Total: $${totalFinal}</h2>
+    `;
 
 }
 
