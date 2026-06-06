@@ -58,4 +58,4 @@ const cafes = [
 
 let carrito = []
 const catalogo = document.getElementById("productosCatalogo");
-const contenedorCarrito = document.querySelector(".productos")
+const contenedorCarrito = document.querySelector(".productos");
