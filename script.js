@@ -54,4 +54,9 @@ const cafes = [
         imagen: "./imgs/iced latte.jpg"
     }
 
-]
+];
+
+let carrito = []
+const catalogo =
+document.getElementById("catalogo");
+const productos = document.querySelector(".productos")
