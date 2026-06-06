@@ -56,15 +56,18 @@ header{
 .cafe{
     border-radius: 20px;
     width: 250px;
-    height: 283px;
+    height: 280px;
+    background-color: white;
 }
 
 .cafe img{
+    width: 100%;
+    height:  100%;
     border-top-left-radius: 18px;
     border-top-right-radius: 18px;
 }
 
-.cafe .botones{
+.cafe .boton{
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -75,16 +78,17 @@ header{
     
 }
 
-.cafe .botones strong{
+.cafe .boton strong{
     text-align: center;
 }
 
-.cafe .botones button{
+.cafe .boton button{
     align-self: center;
-    width: 80%;
+    width: 60%;
     height: 35px;
-    background-color: aqua;
-    border-radius: 7px;
+    background-color: rgb(236, 192, 135);
+    color: white;
+    border-radius: 10px;
     cursor: pointer;
 }
 
