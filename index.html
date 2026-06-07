@@ -6,15 +6,18 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CodeBrew</title>
 </head>
 <body>
+    <!-- Gracias a la ayuda de la IA se pudo lograr un diseño responsivo 
+    y apto para dispositivos mobiles en la pagina -->
     <header class="w-full h-[120px] bg-[rgb(250,236,201)] flex justify-center sticky top-0 z-50">
         <nav class="w-4/5 h-full flex justify-between items-center p-1">
             <div class="logo w-37 h-50 max-w-full max-h-full flex justify-center items-center">
                 <a href=""><img src="./imgs/logito.jpeg" class=" h-full max-w-full max-h-full rounded-full"></a>
             </div>
-            <ul class="flex gap-10">
+            <ul class="flex flex-wrap justify-center gap-4 md:gap-10">
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#galeria">Galería</a></li>
                 <li><a href="#catalogo">Catalogo</a></li>
@@ -26,7 +29,7 @@
     <main>
         <section class="w-full h-[90vh] scroll-mt-30" id="inicio">
             <div class="hero w-full h-[90vh] p-[45px] bg-[url('./imgs/cafecito1.jpg')] bg-cover bg-center bg-no-repeat flex justify-end items-center">
-                <div class="miniHero w-[25%] h-[25%] bg-white/40 flex flex-col items-center gap-[20px] p-5 rounded-3xl">
+                <div class="miniHero w-full sm:w-[70%] md:w-[40%] lg:w-[25%] bg-white/40 flex flex-col items-center gap-[20px] p5 rounded-3xl">
                     <h1 class="text-2xl">El mejor café para programar</h1>
                     <p class="descHero">
                         Hecho con granos 100% naturales, extraidos desde el <br>
@@ -75,8 +78,8 @@
             
         </section>
 
-        <section class="w-full h-[100vh] catalogo scroll-mt-30 flex" id="catalogo">
-            <div id= "productosCatalogo" class="catalogo w-[70%] grid grid-cols-3 gap-5 p-5 bg-[#FFF8E7] overflow-auto">
+        <section class="w-full min-h-screen catalogo scroll-mt-30 flex flex-col md:flex-row" id="catalogo">
+            <div id= "productosCatalogo" class="catalogo w-full md:w-[70%] grid grid-cols-2 md:grid-cols-3 gap-5 p-5 bg-[#FFF8E7] overflow-auto">
                 <!-- <div class="cafe">
                     <div class="imagenCarousel">
                         <img src="./imgs/espresso.jpg" alt="">
@@ -168,7 +171,7 @@
                     </div>
                 </div> -->
             </div>
-            <div class="carrito w-[30%] h-full bg-[#E8D5B5]" id="carrito">
+            <div class="carrito w-full md:w-[30%] min-h-[400px] bg-[#E8D5B5]" id="carrito">
                 <h2 class="titulo"> Pedido</h2>
 
                 <div class="productos">
@@ -176,9 +179,10 @@
                 </div>
 
                 <div class="btones">
-                    <button class="vaciar"> Vaciar Carrito</button>
-                    <button class="comprar"> Comprar</button>
+                    <button class="vaciar" id="vaciar"> Vaciar Carrito</button>
+                    <button class="comprar" id="comprar"> Comprar</button>
                 </div>
+                <div id="mensaje"></div>
 
 
             </div>
@@ -188,10 +192,36 @@
         </section>
     </main>
 
-    <footer class="w-full h-[50vh] flex justify-center items-center flex-col bg-black">
-        <h3 class="text-white">Nos Ubicamos Aquí</h3>
-        <iframe class="" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1581.8097308388042!2d-73.11239906668432!3d-40.58112041344842!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9616367329c8f58d%3A0x47fbb33fea605c22!2sInacap%20-%20Sede%20Osorno!5e1!3m2!1ses-419!2scl!4v1780618302865!5m2!1ses-419!2scl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <footer class="w-full bg-black text-white p-8">
 
+        <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+
+            <div class="flex flex-col gap-3">
+                <h3 class="text-2xl font-bold">CodeBrew</h3>
+                <p> - El mejor cafe para programadores</p>
+                <p> - Osorno, Chile</p>
+        
+                <h3 class="text-xl font-bold"> Contactos </h3>
+                <p> +56 9 6444 9755 </p>
+                <p> +56 9 3361 2014 </p>
+                <p> - codebrew@gmail.cl</p>
+            </div>
+
+            <div class="flex flex-col items-center">
+                <h3 class="text-white text-2xl font-bold text-center mb-6">Nos Ubicamos Aquí</h3>
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1581.8097308388042!2d-73.11239906668432!3d-40.58112041344842!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9616367329c8f58d%3A0x47fbb33fea605c22!2sInacap%20-%20Sede%20Osorno!5e1!3m2!1ses-419!2scl!4v1780618302865!5m2!1ses-419!2scl" 
+                    width="600" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+            
+        </div>
+        
+        <hr class="my-4 border-gray-700">
+        <p class="text-center text-gray-400">
+            2026 CodeBrew
+        </p>
+        
     </footer>
 <script src="script.js"></script>
 </body>

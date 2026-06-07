@@ -59,10 +59,13 @@ const cafes = [
 let carrito = []
 const catalogo = document.getElementById("productosCatalogo");
 const contenedorCarrito = document.querySelector(".productos");
+const btnVaciar = document.getElementById("vaciar");
+const btnComprar = document.getElementById("comprar");
+const mensaje = document.getElementById("mensaje");
 
 function menu() {
     catalogo.innerHTML = "";
-    cafes.forEach(cafe =>  {
+    cafes.forEach(cafe => {
 
         catalogo.innerHTML += `
             <div class="cafe">
@@ -136,6 +139,33 @@ function actualizar(){
 
 }
 
+function vaciar() {
+    carrito = []
+    actualizar();
+}
+
+function comprar() {
+    if (carrito.length === 0) {
+        mensaje.innerHTML = `
+            <div class="items vacio">
+                Tu carrito esta vacio
+            </div>
+        `;
+        return;
+    }
+
+    mensaje.innerHTML = `
+        <div>
+            Gracias por su compra
+        </div>
+    `;
+
+    carrito = [];
+    actualizar();
+}
+
+btnVaciar.addEventListener("click",vaciar)
+btnComprar.addEventListener("click",comprar)
 
 menu()
 actualizar()
