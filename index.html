@@ -5,8 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
     <link rel="stylesheet" href="style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="logicaProductos.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="formContacto.js" defer></script>
+
     <title>CodeBrew</title>
 </head>
 <body>
@@ -29,7 +34,7 @@
     <main>
         <section class="w-full h-[90vh] scroll-mt-30" id="inicio">
             <div class="hero w-full h-[90vh] p-[45px] bg-[url('./imgs/cafecito1.jpg')] bg-cover bg-center bg-no-repeat flex justify-end items-center">
-                <div class="miniHero w-full sm:w-[70%] md:w-[40%] lg:w-[25%] bg-white/40 flex flex-col items-center gap-[20px] p5 rounded-3xl">
+                <div class="miniHero w-full sm:w-[70%] md:w-[40%] lg:w-[25%] bg-white/40 flex flex-col items-center gap-[20px] p-5 rounded-3xl">
                     <h1 class="text-2xl">El mejor café para programar</h1>
                     <p class="descHero">
                         Hecho con granos 100% naturales, extraidos desde el <br>
@@ -80,96 +85,7 @@
 
         <section class="w-full min-h-screen catalogo scroll-mt-30 flex flex-col md:flex-row" id="catalogo">
             <div id= "productosCatalogo" class="catalogo w-full md:w-[70%] grid grid-cols-2 md:grid-cols-3 gap-5 p-5 bg-[#FFF8E7] overflow-auto">
-                <!-- <div class="cafe">
-                    <div class="imagenCarousel">
-                        <img src="./imgs/espresso.jpg" alt="">
-                    </div>
-                    <div class="botones">
-                        <strong>Espresso</strong>
-                        <span>$</span>
-                        <button class="agregar">Agregar</button>
-                    </div>
-                </div>
-                <div class="cafe">
-                    <div class="imagenCarousel">
-                        <img src="./imgs/americano.jpg" alt="">
-                    </div>
-                    <div class="botones">
-                        <strong>Americano</strong>
-                        <span>$</span>
-                        <button class="agregar">Agregar</button>
-                    </div>
-                </div>
-                <div class="cafe">
-                    <div class="imagenCarousel">
-                        <img src="./imgs/macchiato.jpg" alt="">
-                    </div>
-                    <div class="botones ">
-                        <strong>Machiatto</strong>
-                        <span>$</span>
-                        <button class="agregar">Agregar</button>
-                    </div>
-                </div>
-                <div class="cafe">
-                    <div class="imagenCarousel">
-                        <img src="./imgs/cortado.jpg" alt="">
-                    </div>
-                    <div class="botones ">
-                        <strong>Cortado</strong>
-                        <span>$</span>
-                        <button class="agregar">Agregar</button>
-                    </div>
-                </div>
-                <div class="cafe">
-                    <div class="imagenCarousel">
-                        <img src="./imgs/flat white.jpg" alt="">
-                    </div>
-                    <div class="botones ">
-                        <strong>Flat White</strong>
-                        <span>$</span>
-                        <button class="agregar">Agregar</button>
-                    </div>
-                </div>
-                <div class="cafe">
-                    <div class="imagenCarousel">
-                        <img src="./imgs/capuccino.jpg" alt="">
-                    </div>
-                    <div class="botones ">
-                        <strong>Capuccino</strong>
-                        <span>$</span>
-                        <button class="agregar">Agregar</button>
-                    </div>
-                </div>
-                <div class="cafe">
-                    <div class="imagenCarousel">
-                        <img src="./imgs/latte.jpg" alt="">
-                    </div>
-                    <div class="botones ">
-                        <strong>Latte</strong>
-                        <span>$</span>
-                        <button class="agregar">Agregar</button>
-                    </div>
-                </div>
-                <div class="cafe">
-                    <div class="imagenCarousel">
-                        <img src="./imgs/mocha.jpg" alt="">
-                    </div>
-                    <div class="botones ">
-                        <strong>Mocha</strong>
-                        <span>$</span>
-                        <button class="agregar">Agregar</button>
-                    </div>
-                </div>
-                <div class="cafe">
-                    <div class="imagenCarousel">
-                        <img src="./imgs/iced latte.jpg" alt="">
-                    </div>
-                    <div class="botones ">
-                        <strong>Latte Frio</strong>
-                        <span>$</span>
-                        <button class="agregar">Agregar</button>
-                    </div>
-                </div> -->
+                
             </div>
             <div class="carrito w-full md:w-[30%] min-h-[400px] bg-[#E8D5B5]" id="carrito">
                 <h2 class="titulo"> Pedido</h2>
@@ -187,8 +103,34 @@
 
             </div>
         </section>
-        <section class="w-full h-[100vh] scroll-mt-30" id="contacto">
+        <section class="w-full h-[100vh] scroll-mt-30 p-4 bg-gray-400 flex justify-center" id="contacto">
+            <div class="containerContacto w-full bg-white h-full p-4 flex flex-col items-center">
+                <h2 class="text-2xl underline p-2 text-center">Contactanos!!</h2>
+                <form id="formContacto" class="w-4/5 p-7 bg-[#E8D1B5] flex flex-col gap-4 rounded">  
 
+                    <div class="inputContainer">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" id="nombre" class="inputForm">
+                    </div>
+
+                    <div class="inputContainer">
+                        <label for="apellido">Apellidos</label>
+                        <input type="text" id="apellido" class="inputForm">
+                    </div>
+
+                    <div class="inputContainer">
+                        <label for="mail">Correo Electrónico</label>
+                        <input type="email" id="mail" class="inputForm">
+                    </div>
+
+                    <div class="inputContainer">
+                        <label for="desc">¿Por qué nos contactas?</label>
+                        <textarea id="desc" class="inputForm resize-none"></textarea>
+                    </div>
+                    <button type="submit" id="enviar" class="btn bg-blue-600 p-4 rounded-4xl text-white cursor-pointer">Enviar Correo</button>
+
+                </form>
+            </div>
         </section>
     </main>
 
@@ -211,7 +153,7 @@
                 <h3 class="text-white text-2xl font-bold text-center mb-6">Nos Ubicamos Aquí</h3>
                 <iframe 
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1581.8097308388042!2d-73.11239906668432!3d-40.58112041344842!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9616367329c8f58d%3A0x47fbb33fea605c22!2sInacap%20-%20Sede%20Osorno!5e1!3m2!1ses-419!2scl!4v1780618302865!5m2!1ses-419!2scl" 
-                    width="600" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    class="w-[600px] max-w-[600px] h-[350px]" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
                 </iframe>
             </div>
             
@@ -223,6 +165,5 @@
         </p>
         
     </footer>
-<script src="script.js"></script>
 </body>
-</html>>
+</html>
