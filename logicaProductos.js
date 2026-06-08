@@ -122,7 +122,8 @@ function actualizar(){
 
     });
 
-    /* mini ayuda IA*/
+    /* La IA sugirio una manera mas eficiente para mejorar la función
+       de actualizar y poder realizar un descuento apropiado, la cual fue implentada*/
 
     let descuento = 0;
     if (total > 10000) {
